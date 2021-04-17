@@ -11,9 +11,11 @@ public class returnKeypad {
 		}
 		String smallerArray[] = returnKeypads(num/10);
 		String smallans[] = findAlphabets(num%10);
+		System.out.println("legth of smallans = " + smallans.length);
+		System.out.println("legth of samllerArray = " + smallerArray.length);
 //		char options[] = new char[4];
 		String ans[] = new String[smallans.length * smallerArray.length];
-		
+		System.out.println("length of ans = " + ans.length);
 		
 		int k=0;
 		for(int i=0;i<smallans.length;i++) {

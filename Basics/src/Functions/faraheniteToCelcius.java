@@ -4,25 +4,28 @@ import java.util.Scanner;
 
 public class faraheniteToCelcius {
 
-	public static int faherenheitToCelcius(int S, int E, int W) {
-		int result =0;
-		while( S <= E)
-		{
-			result = S+(S-32)*5/9;
-			S = S+W;
+
+	public static void printFahrenheitTable(int start, int end, int step) {
+		double fh=0;
+		int i=start;
+		while(i<=end) {
+			fh=(double)5/9*(start-32);
+			System.out.print(start+"\t"+(int)(fh));
+			System.out.println();
+			start=start+step;
+			i=i+step;
 		}
-		return result ;
-
 	}
+
 	public static void main(String[] args) {
-
 		Scanner s = new Scanner(System.in);
-		int	S = s. nextInt();
-		int E = s. nextInt();
-		int  W = s. nextInt();
-		int result = faherenheitToCelcius(S, E, W);
-		System.out.println(result);
-
+		int start = s.nextInt();
+		int end = s.nextInt();
+		int step = s.nextInt();
+		printFahrenheitTable(start, end, step);
 	}
-
 }
+
+
+
+

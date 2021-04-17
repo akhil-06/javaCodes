@@ -12,7 +12,7 @@ public class MergeSort {
 		int i=si;
 		int j=mid+1;
 		while(i<=mid && j<= ei) {
-			if(arr[i]<arr[j]) {
+			if(arr[i] < arr[j]) {
 				ans[k] = arr[i];
 				i++;
 				k++;

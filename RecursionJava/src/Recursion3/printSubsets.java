@@ -12,6 +12,12 @@ public class printSubsets {
 			System.out.println();
 			return;
 		}
+		
+		//when 1st element not included
+				printSubsets(arr,SI+1,outputsoFar);
+				
+				
+				
 		//when 1st element is included
 		int newoutput[] = new int[outputsoFar.length+1];
 		int i=0;
@@ -19,10 +25,9 @@ public class printSubsets {
 			newoutput[i] = outputsoFar[i];
 		}
 		newoutput[i] = arr[SI];
-		printSubsets(arr,SI+1,outputsoFar);
-		
-		//when 1st element not included
 		printSubsets(arr,SI+1,newoutput);
+		
+		
 		
 	}
 	
@@ -47,6 +52,7 @@ public class printSubsets {
 		}
 		return arr;
 	}
+	
 	public static void printSubsets(int[] arr) {
 		int [] outputsoFar = new int[0];
 		printSubsets(arr,0,outputsoFar);

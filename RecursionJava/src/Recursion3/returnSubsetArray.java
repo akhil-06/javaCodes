@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 public class returnSubsetArray {
 
-	public static int[][] returnSubsets(int []arr,int start) {
+	public static int[][] returnSubsetshelper(int []arr,int start) {
 		if(start == arr.length) {
 			int[][] output = new int[1][0];
 			return output;
 		}
 
-		int[][] smallAns = returnSubsets(arr, start + 1);
+		int[][] smallAns = returnSubsetshelper(arr, start + 1);
+//		System.out.println("smalAns is = " + smallAns.length);
 		int[][] ans = new int[2*smallAns.length][];
-
+//		System.out.println("lengtth of ans = " + ans.length);
 
 		int k=0;
 		for(int i=0;i<smallAns.length;i++) {
@@ -34,14 +35,15 @@ public class returnSubsetArray {
 	}
 	
 	public static void printArray(int [][] ans) {
-		int rows = ans.length;
-		int cols = ans[0].length;
-		for(int i=0;i<rows;i++) {
-			for(int j=0;j<cols;j++) {
+//		System.out.println("hello");
+//		int rows = ans.length;
+//		int cols = ans[0].length;
+		for(int i=0;i<ans.length;i++) {
+			for(int j=0;j<ans[i].length;j++) {
 				System.out.print(ans[i][j] + " ");
 			}
 			System.out.println();
-		}
+		} 
 	}
 
 	public static int[] takeInput() {
@@ -54,12 +56,22 @@ public class returnSubsetArray {
 		}
 		return arr;
 	}
+	
+	public static int[][] returnSubsets(int []arr){
+		return returnSubsetshelper(arr,0);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int []arr = takeInput();
-		int ans[][] = returnSubsets(arr,0);
-		printArray(ans);
+		int output[][] = returnSubsets(arr);
+		printArray(output);
+//		for(int i=0;i<output.length;i++) {
+//			for(int j=0;j<output[i].length;j++) {
+//				System.out.print(output[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
 	}
 
 }
