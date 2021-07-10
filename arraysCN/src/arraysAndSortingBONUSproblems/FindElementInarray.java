@@ -22,7 +22,7 @@ import java.util.Scanner;
 //4. We will first search the given number in first half (0 to pivot position) and if it is not found
 //in the first half, then we will search it in second half (pivot position + 1 to array.length-1).
 //5. If the given number is not found in the second half as well, then we return -1.
-
+ 
 public class FindElementInarray {
 
 	public static int findElement(int[] arr, int num) {

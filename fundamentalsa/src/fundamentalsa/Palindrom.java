@@ -6,9 +6,9 @@ public class Palindrom {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		Scanner s = new Scanner(System.in);
-		
+
 		int num = s.nextInt();
 		int temp;
 		int sum=0;
@@ -19,11 +19,11 @@ public class Palindrom {
 			sum = (sum*10)+re;
 			num=num/10;
 		}
-		
+
 		if(temp==sum) {
 			System.out.println("palindrom");
 		}else {
 			System.out.println("not palindrom");
 		}
-		}
+	}
 }

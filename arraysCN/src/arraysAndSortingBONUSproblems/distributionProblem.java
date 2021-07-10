@@ -46,15 +46,18 @@ public class distributionProblem {
 		return arr;
 	}
 	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = takeInput();
 		//		printArray(arr);
 		Scanner s = new Scanner(System.in);
-		System.out.print("Enter m = ");
+		System.out.print("Enter num = ");
 		int num = s.nextInt();
 		distributionProblem(arr,num);
-
+		String str = "abc";
+		String str2= "abc";
+		System.out.println(str.equals(str2));
 	}
 
 }
