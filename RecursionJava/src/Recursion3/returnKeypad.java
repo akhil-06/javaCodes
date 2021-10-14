@@ -36,7 +36,7 @@ public class returnKeypad {
 			String output[] = {"a","b","c"};
 			return output;
 		}
-		if(num==3) {
+		if(num==3) {  
 			String output[] = {"d","e","f"};
 			return output;
 		}

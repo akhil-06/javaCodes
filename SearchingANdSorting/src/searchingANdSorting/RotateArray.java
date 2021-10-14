@@ -6,7 +6,7 @@ public class RotateArray {
 	
 	public static void RotateArray(int[] arr, int num) {
 		for(int i=0;i<num;i++) {
-			int temp = arr[0];
+			int temp = arr[i];
 			arr[i] = arr[i+1];
 			arr[i+1] = temp;
 		}

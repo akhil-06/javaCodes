@@ -8,7 +8,7 @@ public class IntersectionOfArrays {
 		int n=arr.length;
 		int n1=arr1.length;
 		for(int i=0;i<n;i++) {
-			for(int j=0;j<n;j++) {
+			for(int j=0;j<n1;j++) {
 				if(arr[i] == arr1[j]) {
 					System.out.println(arr[i]);
 					arr1[j]= Integer.MIN_VALUE;
